@@ -1,0 +1,90 @@
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+ }
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+#topbar {
+  background-color: #000000;
+}
+
+#form {
+  width: 48%;
+  text-align: right;
+  font-size: 10px;
+}
+
+
+#home {
+  background: url(../images/home.jpg) no-repeat center center fixed;
+  background-color: #E6E6E6; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#product {
+  background-color: #99CCFF;
+}
+
+#references {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+
+#faq {
+  color: black;
+}
+
+
+#we {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+
+#contact {
+  background: #E6E6E6;
+}
+
+#icon {
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  border: 4px solid #FFFFFF;
+  border-radius: 50%;
+ -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+footer {
+  padding: 0px;
+}
