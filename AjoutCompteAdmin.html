@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Ajout d'un compte</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8" />
+
+  <!-- CSS links -->
+  <link href="css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/tuto.css" rel="stylesheet">   
+</head>
+<body>
+
+	<!--JavaScripts -->
+ <script src="js/LibsJS/jquery-1.11.1.min.js"></script>
+ <script src="js/LibsJS/bootstrap.min.js"></script>
+ <script src="js/LibsJS/smooth.js"></script>
+</body>
+	<div class="container">
+      <header class="row">
+      		<div class="col-sm-2 text-center">
+          		Logo
+        	</div>
+        	<div class="col-sm-offset-6 col-sm-4 text-center">
+         	 Nom prénom deco
+       		</div>
+      </header>
+      <div class="row">
+        	<nav class="col-sm-2 text-center">
+          		Accueil<br>
+          		Support<br>
+          		F.A.Q<br>
+        	</nav>
+        	<section class="col-sm-10">          		
+          		<div class ="col-sm-offset-6 col-sm-6">
+          			<a href="...">Mon compte</a>
+          			<a href="...">Déconnexion</a>
+          		</div>   
+          		<h1>Créer un compte</h1>
+              <section>
+                <form method ="post" action="DJANGO">
+                 <label for="nom"> Le nom : </label> <input type="text" name="nom" id="nom" />
+                 <label for="prenom"> Le prénom : </label> <input type="text" name="prénom" id="prenom"/>
+                 <label for="matricule"> Le matricule : </label> <input type="text" name="matricule" id="matricule"/>
+                 <label for="specialite"> Specialité : </label> <br/>
+                 <select name="specialite" id="specialite">
+                    <option value="Neurologie">Neurologie</option>
+                    <option value="espagne">Espagne</option>
+                    <option value="italie">Italie</option>
+                 </select>
+                 <label for="email"> Email : </label> <input type="email"  name="email" id="email" />
+                 <label for="telPoste"> Téléphone du poste : </label> <input type="tel"  name="telPoste" id="telPoste" />
+                 <label for="FinAbo"> Fin d'abonnement : </label> <input type="FinAbo" />
+                </form>
+              </section>    	
+      		</section>
+      	</div>
+    </div>
+</html>
