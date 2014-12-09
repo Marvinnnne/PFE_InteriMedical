@@ -2,103 +2,112 @@
 <html>
 <head>
 
-  <title>Accueil</title>
+<title>Accueil</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="utf-8" />
 
-  <!-- CSS links -->
-  <link href="css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/tuto.css" rel="stylesheet">   
+<!-- CSS links -->
+<link href="css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
+<link href="css/tuto.css" rel="stylesheet">   
 </head>
 <body>
-    <div class="container">
-      <header class="row">
-      		<div class="col-sm-2 text-center">
-          		Logo
-        	</div>
-        	<div class="col-sm-offset-6 col-sm-4 text-center">
-         	 Nom prénom deco
-       		</div>
-      </header>
-      <div class="row">
-        	<nav class="col-sm-2 text-center">
-          		Accueil<br>
-          		Support<br>
-          		F.A.Q<br>
-        	</nav>
-        	<section class="col-sm-10">          		
-          		<div class ="col-sm-offset-6 col-sm-6">
-          			<a href="...">Mon compte</a>
-          			<a href="...">Déconnexion</a>
-          		</div>   
-          		<button type="button">
-          			Ajouter un nouveau compte
-          		</button>         	
-      		</section>
-      		<section class="col-sm-10">
-      			<h1>GESTION DES COMPTES</h1>
-      			<input type="search" placeholder="Recherche...">
-      			<button type="submit" formaction ="..." formenctype="" formethod=""> Recherchez </button>
-      			<div class ="row">
-      				<section class="col-sm-8">
-      					Filtres
-      					<select name="select">
-							<option>Secteur</option>
-							<option>Neurologie</option>
-							<option>Oups</option>
-						</select>
-						<label>Expiration dans moins de </label>
-						<input type="number" name="nombre" value="12345"></input>	
-						<select name="select">
-							<option>Année</option>
-							<option>Mois</option>
-							<option>Jours</option>
-						</select>					
-      				</section>
-      				<section class="col-sm-4">
-      					Triez par
-      					<select name="select">
-							<option>Nom</option>
-							<option>Matricule</option>
-						</select>
-						<select name="select">
-							<option>Croissant</option>
-							<option>Décroissant</option>
-						</select>
-      				</section>
-      			</div>
-      			<section class="col-sm-12">
-      				<section class="col-sm-12">
-      					<ul>
-      						<li>Compte 1
-      							<ul>
-      								<li>Nom du titulaire</li>
-      								<li>Période de validité</li>
-      								<input type="button" name="nom" value="Modifier"></input>	
-      								<input type="button" name="nom" value="Historique"></input>	
-      							</ul>
-      						</li>
-      					</ul>
-      				</section>
-      				<section class="col-sm-12">
-      					<ul>
-      						<li>Compte 2
-      							<ul>
-      								<li>Nom du titulaire</li>
-      								<li>Période de validité</li>
-      								<input type="button" name="nom" value="Modifier"></input>	
-      								<input type="button" name="nom" value="Historique"></input>	
-      							</ul>
-      						</li> 
-      					</ul>     				
-      				</section>
-      		 </section>
-      	</div> 
-    </div>
-    <!--JavaScripts -->
- <script src="js/LibsJS/jquery-1.11.1.min.js"></script>
- <script src="js/LibsJS/bootstrap.min.js"></script>
- <script src="js/LibsJS/smooth.js"></script>
+<div class="container">
+<header class="row">
+	<div class="col-sm-2 text-center">
+		Logo
+</div>
+<div class="col-sm-offset-6 col-sm-4 text-center">
+	 Nom prénom deco
+	</div>
+</header>
+<div class="row">
+<nav class="col-sm-2 text-center">
+		Accueil<br>
+		Support<br>
+		F.A.Q<br>
+</nav>
+<section class="col-sm-10">          		
+		<div class ="col-sm-offset-6 col-sm-6">
+			<a href="...">Mon compte</a>
+			<a href="...">Déconnexion</a>
+		</div>   
+		<button type="button">
+			Ajouter un nouveau compte
+		</button>         	
+	</section>
+	<section class="col-sm-10">
+		<h1>GESTION DES COMPTES</h1>
+		<input type="search" placeholder="Recherche...">
+		<button type="submit" formaction ="..." formenctype="" formethod=""> Recherchez </button>
+		<div class ="row">
+			<section class="col-sm-8">					
+				<fieldset>
+					<legend>Filtres</legend>
+					<select name="select">
+						<option>Secteur</option>
+						<option>Neurologie</option>
+						<option>Oups</option>
+					</select>
+					<select name="select">
+						<option>Secteur</option>
+						<option>Neurologie</option>
+						<option>Oups</option>
+					</select>
+				</fieldset>				
+				<label>Expiration dans moins de </label>
+				<input type="number" name="nombre" value="12345"></input>	
+				<select name="select">
+					<option>Année</option>
+					<option>Mois</option>
+					<option>Jours</option>
+				</select>					
+			</section>
+			<section class="col-sm-4">
+				<fieldset>
+					<legend>Triez par</legend>
+				</fieldset>				
+				<select name="select">
+					<option>Nom</option>
+					<option>Matricule</option>
+				</select>
+				<select name="select">
+					<option>Croissant</option>
+					<option>Décroissant</option>
+				</select>
+			</section>
+		</div>
+		<section class="col-sm-12">
+			<section class="col-sm-12">
+				<ul>
+					<li>Compte 1
+						<ul>
+							<li>Nom du titulaire</li>
+							<li>Période de validité</li>
+							<input type="button" name="nom" value="Modifier"></input>	
+							<input type="button" name="nom" value="Historique"></input>	
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="col-sm-12">
+				<ul>
+					<li>Compte 2
+						<ul>
+							<li>Nom du titulaire</li>
+							<li>Période de validité</li>
+							<input type="button" name="nom" value="Modifier"></input>	
+							<input type="button" name="nom" value="Historique"></input>	
+						</ul>
+					</li> 
+				</ul>     				
+			</section>
+	 </section>
+</div> 
+</div>
+<!--JavaScripts -->
+<script src="js/LibsJS/jquery-1.11.1.min.js"></script>
+<script src="js/LibsJS/bootstrap.min.js"></script>
+<script src="js/LibsJS/smooth.js"></script>
 </body>
 </html>
