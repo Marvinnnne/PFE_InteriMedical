@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Inscription Urjob</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8" />
+
+  <!-- CSS links -->
+  <link href="../css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/tuto.css" rel="stylesheet">   
+</head>
+
+<body>
+	<section class="navbar navbar-default navbar-fixed-top col-sm-12" id="topbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home">Urjob</a>
+      </div>
+      <center>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#references">References</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#we">Our team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <form class="navbar-form navbar-right" id="form">
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Sign In</button>
+          <button type="button" class="btn btn-default">Sign Up</button>
+          <a href="...">forgot password?</a>
+        </form>
+      </center>
+    </div>
+  </section>
+  <section class="col-sm-12" style ="margin-top : 13%;">
+    <div class="container">
+      <form method ="post" action="DJANGO">
+        <fieldset>
+          <legend>Identité du cadre</legend>
+          <label for="nom"> Nom : </label> <input type="text" name="nom" id="nom" required/>
+          <label for="prenom"> Prénom : </label> <input type="text" name="prénom" id="prenom" required/>
+          <label for="DdN"> Date de naissance : </label> <input type="date" name="DdN" id="DdN"/ required>
+          <label for="specialite"> Specialité : </label> <br/>
+          <input type="checkbox" name="Neurologie" id="Neurologie" /> <label for="Neurologie"> Neurologie </label>
+          <input type="checkbox" name="spermicide" id="spermicide" /> <label for="spermicide"> spermicide </label>
+          <label for="Adresse"> Adresse : </label> <input type="text" name="Adresse" id="Adresse" required/>
+          <label for="CP"> Code Postal : </label> <input type="number" name="CP" id="CP" maxlength="5"required/>
+          <label for="Ville"> Ville : </label> <input type="text"  name="Ville" id="Ville" required/>
+          <label for="email"> Email : </label> <input type="email"  name="email" id="email" required/>
+          <label for="telPort"> Téléphone du portable : </label> <input type="tel"  name="telPort" id="telPort" required/>
+        </fieldset>
+        <fieldset>
+          <legend>Mes fichiers</legend>
+          <label for="DIP"> Diplôme : </label> <input type="file" name="DIP">
+          <label for="CNI"> Carte de d'identité : </label> <input type="file" name="CNI">
+          <label for="CSC"> Carte de sécurité sociale : </label> <input type="file" name="CSC">
+        </fieldset>         
+      </form>
+      <button class="btn btn-primary" type="submit">Enregistrer</button>
+    </div>
+  </section>
+</body>
+</html>
