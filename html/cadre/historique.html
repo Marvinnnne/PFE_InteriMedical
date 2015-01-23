@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Récapitulatif</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta charset="utf-8" />
+
+	<!-- CSS links -->
+	<link href="../../css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
+	<link href="../../css/tuto.css" rel="stylesheet">   
+</head>
+<body>
+
+	<header class="header">
+		<div class="logText">
+			NOM prénom <!-- à remplacer par nom/prénom de l'utilisateur à aller cherchez dans la bdd -->
+		</div>
+		<div class ="logLink">
+			<a href="moncompte.html">Mon compte</a>
+			<a href="#">Déconnexion</a>
+		</div> 
+	</header>
+
+	<div class="container">
+
+		<div class="col-sm-2">
+			<a href="accueil.html"><img src="../../images/logo_urjob.jpg" /></a>
+			<nav class="nav-link">
+				<ul>
+					<li><a href="accueil.html">Accueil</a></li>
+					<li><a href="demande.html">Demande d'intérimaire</a></li>
+					<li><a href="encours.html">Missions en cours</a></li>
+					<li><a href="validation.html">Validation des présences</a></li>
+					<li><a href="notes.html">Notes</a></li>
+					<li><a href="historique.html">Historique</a></li>
+					<li><a href="support.html">Support</a></li>
+					<li><a href="faq.html">F.A.Q</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="col-sm-10">
+			<h1>Historique des missions</h1>
+			<br>
+			<form method="post" action="">
+				<input type="search" placeholder="Recherche...">
+				<input type="button" value="Rechercher" />
+				<div>
+					<fieldset class="col-sm-8">
+						<legend>Filtres</legend>
+						<label for="date_debut">Date de début</label> : <input type="date" name="date_debut" id="date_debut" required>
+						<label for="date_fin">Date de fin</label> : <input type="date" name="date_fin" id="date_fin" class="datepicker" data-date-format="dd/mm/yyyy" required><br>
+					</fieldset>								
+
+
+					<fieldset class="col-sm-4">
+						<legend>Trier par</legend>
+
+						<select name="filtre">
+							<option>Nom</option>
+							<option>Matricule</option>
+						</select>
+
+						<select name="ordre">
+							<option>Croissant</option>
+							<option>Décroissant</option>
+						</select>
+					</fieldset>	
+				</div>
+			</form>
+		</div>
+
+		<!-- liste l'ensemble des missions ou le résultat de la recherche-->
+		<div class="col-sm-10">
+			<section class="col-sm-12">
+				<div class="col-sm-5">
+					Intérimaire : <br>
+					Unité : <br>
+					Missions : <br>
+				</div>
+				<div class="col-sm-5">
+					Date de début : <br>
+					Date de fin : <br>
+				</div>
+				<div class="col-sm-2">
+					<img src="../../images/logo_hopital.jpg" />
+				</div>
+			</section>
+			<section class="col-sm-12">
+				<div class="col-sm-5">
+					Intérimaire : <br>
+					Unité : <br>
+					Missions : <br>
+				</div>
+				<div class="col-sm-5">
+					Date de début : <br>
+					Date de fin : <br>
+				</div>
+				<div class="col-sm-2">
+					<img src="../../images/logo_hopital.jpg" />
+				</div>
+			</section>
+			<section class="col-sm-12">
+				<div class="col-sm-5">
+					Intérimaire : <br>
+					Unité : <br>
+					Missions : <br>
+				</div>
+				<div class="col-sm-5">
+					Date de début : <br>
+					Date de fin : <br>
+				</div>
+				<div class="col-sm-2">
+					<img src="../../images/logo_hopital.jpg" />
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<footer>
+		<p class="text-center">Copyright &copy; Urjob 2014</p>
+	</footer> 
+
+	<!--JavaScripts -->
+	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
+	<script src="../../js/LibsJS/bootstrap.min.js"></script>
+</body>
+</html>
