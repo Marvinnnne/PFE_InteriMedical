@@ -23,6 +23,7 @@
 
 	<div class="container">
 		<div class="col-sm-2">
+		<!--
 			<a href="accueil.html"><img src="../../images/logo_urjob.jpg" /></a>
 			<nav class="nav-link">
 				<ul>
@@ -31,14 +32,14 @@
 					<li><a href="faq.html">F.A.Q</a></li>
 				</ul>
 			</nav>
+		-->
+			<div id="menu"></div>
 		</div>
 
 		<section class="col-sm-10">
 			<br>
-			<form action="ajoutcompte.html">
-    			<input type="submit" value="Ajouter un nouveau compte">
-			</form>     	
-			<br>
+			<a href="ajoutcompte.html">Ajouter un nouveau compte</a>
+			<br><br>
 		</section>
 
 		<section class="col-sm-10">
@@ -50,7 +51,7 @@
 				<section>	
 					<fieldset class="col-sm-8">
 						<legend>Filtres</legend>
-						<label for="select">Secteur</label>
+						<label for="select">Unité</label>
 						<select name="select" id="select">
 							<option>Neurologie</option>
 							<option>Pédiatrie</option>
@@ -89,8 +90,8 @@
 					Période de validité : <br>
 				</div>
 				<div class="col-sm-2">
-					<input type="button" name="nom" value="Modifier"></input><br>	
-					<input type="button" name="nom" value="Historique"></input>	
+					<a href="modifier.html">Modifier</a><br>
+					<a href="historique.html">Historique</a><br>	
 				</div>
 			</section>
 			<section class="col-sm-12">
@@ -100,8 +101,8 @@
 					Période de validité : <br>
 				</div>
 				<div class="col-sm-2">
-					<input type="button" name="nom" value="Modifier"></input><br>	
-					<input type="button" name="nom" value="Historique"></input>	
+					<a href="modifier.html">Modifier</a><br>
+					<a href="historique.html">Historique</a><br>
 				</div>
 			</section>
 		</section>
@@ -115,5 +116,6 @@
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
 	<script src="../../js/smooth.js"></script>
+	<script src="../../js/menu.js"></script>
 </body>
 </html>

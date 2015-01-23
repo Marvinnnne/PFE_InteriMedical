@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mon compte</title>
+	<title>Modifier</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta charset="utf-8" />
 
@@ -37,19 +37,18 @@
 		</div>
 
 		<div class="col-sm-10">
-			<h1>Mon compte</h1>
 			<form method="post" action="">
 				<fieldset class="col-sm-12">
 					<legend>Identité</legend>
-					<label for="nom">Nom</label> : <input type="text" name="nom" id="nom">
-					<label for="prenom">Prénom</label> : <input type="text" name="nprenom" id="prenom">
-					<label for="matricule">Matricule</label> : <input type="text" name="matricule" id="matricule">
-				</fieldset>
-				<fieldset class="col-sm-12">
-					<legend>Coordonnées</legend>
-					<label for="email">Adresse mail</label> : <input type="email" name="email" id="email" required> <br>
-					<label for="telposte">Téléphone (poste)</label> : <input type="tel" name="telposte" id="telposte" required>
-					<label for="telportable">Téléphone (portable)</label> : <input type="tel" name="telportable" id="telportable">
+					<label for="nom">Nom</label> : <input type="text" name="nom" id="nom"> 
+					<label for="prenom">Prénom</label> : <input type="text" name="nom" id="nom"><br>
+					<label for="date">Date de naissance</label> : <input type="date" name="date" id="date">
+					<label for="select">Unité</label>
+					<select name="Unité">
+							<option>Neurologie</option>
+							<option>Pédiatrie</option>
+							<option>Radiologie</option>
+						</select>
 				</fieldset>
 				<fieldset class="col-sm-12">
 					<legend>Changement mot de passe</legend>
@@ -57,20 +56,26 @@
 					<label for="newpassword1">Nouveau mot de passe</label> : <input type="password" name="newpassword1" id="newpassword1">
 					<label for="newpassword2">Confirmer nouveau mot de passe</label> : <input type="password" name="newpassword2" id="newpassword2">
 				</fieldset>
+				<fieldset class="col-sm-12">
+					<legend>Coordonnées</legend>
+					<label for="email">Adresse mail</label> : <input type="email" name="email" id="email" required> <br>
+					<label for="telposte">Téléphone (poste)</label> : <input type="tel" name="telposte" id="telposte" required>
+					<label for="telportable">Téléphone (portable)</label> : <input type="tel" name="telportable" id="telportable">
+				</fieldset>
 				<br>
-				<input type="button" value="Enregistrer" />
+				<input type="submit" value="Enregistrer" />
 			</form>
 		</div>
-
 	</div>
 
 	<footer>
-		<p class="text-center">Copyright &copy; Urjob 2014</p>
+			<p class="text-center">Copyright &copy; Urjob 2014</p>
 	</footer> 
 
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
+	<script src="../../js/smooth.js"></script>
 	<script src="../../js/menu.js"></script>
 </body>
 </html>
