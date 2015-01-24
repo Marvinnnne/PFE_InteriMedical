@@ -1,21 +1,7 @@
-body {
-  padding-top: 10px;
-}
-
 [class*="col-"], footer {
-  background-color: lightgreen;
-  border: 2px solid black;
-  border-radius: 6px;
-  line-height: 40px;
+  position: relative;
+  line-height: 40px;  
   text-align: center;
-}
-
-input:focus:required:invalid {
-  background: pink url(ico_validation.png) 379px 3px no-repeat;
-}
-input:required:valid {
-  background-color: #fff;
-  background-position: 379px -61px;
 }
 
 /* Just some base styles not needed for example to function */
@@ -27,15 +13,100 @@ body, form, ul, li, p, h2, h3, h4, h5
 	padding: 0;
 }
 
-img { border: none; }
+img 
+{ 
+	border: none; 
+}
+
 p
 {
 	font-size: 1em;
 	margin: 0 0 1em 0;
 }
-h2 { font-size: 14px; margin: 0 0 12px; }
+
+h2 
+{ 
+	font-size: 14px; 
+	margin: 0 0 12px; 
+}
+
+header
+{
+	text-align: center;
+	background-color: rgb(224,224,224);
+	border: 1px solid black;
+
+}
+
+#gray
+{
+	text-align: center;
+	background-color: rgb(224,224,224);
+	border: 1px solid black;
+}
+
+.niveau1
+{
+	float: right;	
+}
+
+.niveau1 ul.niveau2
+{
+	display: none;
+}
+
+.survol:hover ul.niveau2
+{
+	display: block;
+}
+
+#Notif
+{	
+	border: 2px solid black;
+	border-radius: 6px;
+}
+
+#rappel, 
+{
+	background-color: rgb(224,224,224);	
+	text-align: left;
+}
+
+#mission
+{
+	background-color: rgb(224,224,224);	
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+#vertical
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-left: 1px solid black;
+    padding-left: 5px;
+    margin-left: 50px;
+}
+
+#photo
+{
+	margin-top: 20px;
+}
 
 /* Form styles */
+/*
+
+input:focus:required:invalid 
+{
+  background: pink url(ico_validation.png) 379px 3px no-repeat;
+}
+
+input:required:valid 
+{
+  background-color: #fff;
+  background-position: 379px -61px;
+}
+
 #signup
 {
 	margin: 20px auto;
@@ -135,3 +206,4 @@ h2 { font-size: 14px; margin: 0 0 12px; }
 	background-color: #fff;
 	background-position: 379px -61px;
 }
+*/
