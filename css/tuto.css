@@ -13,11 +13,6 @@ body, form, ul, li, p, h2, h3, h4, h5
 	padding: 0;
 }
 
-img 
-{ 
-	border: none; 
-}
-
 p
 {
 	font-size: 1em;
@@ -32,41 +27,53 @@ h2
 
 header
 {
-	text-align: center;
-	background-color: rgb(224,224,224);
-	border: 1px solid black;
-
-}
-
-#gray
-{
-	text-align: center;
 	background-color: rgb(224,224,224);
 	border: 1px solid black;
 }
 
-.niveau1
+#logoUrjob
 {
-	float: right;	
+	position: relative;
+    right: 30%;
 }
 
-.niveau1 ul.niveau2
+.container
+{
+	margin-left: 0px;
+}
+
+#nav
+{
+	text-align: center;
+	background-color: rgb(224,224,224);
+	border: 1px solid black;
+	margin-left: 0px;
+}
+
+#niveau1
+{
+	float: right;
+}
+
+ul#niveau1 ul#niveau2
 {
 	display: none;
 }
 
-.survol:hover ul.niveau2
+ul#niveau1 .survol:hover ul#niveau2
 {
 	display: block;
 }
 
 #Notif
 {	
+	position: relative;
+	margin-top: 20px;
 	border: 2px solid black;
 	border-radius: 6px;
 }
 
-#rappel, 
+#rappel
 {
 	background-color: rgb(224,224,224);	
 	text-align: left;
@@ -79,7 +86,7 @@ header
 	margin-bottom: 30px;
 }
 
-#vertical
+#Traitvertical
 {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -88,8 +95,17 @@ header
     margin-left: 50px;
 }
 
-#photo
+#TraitHorizontal
 {
+	position: relative;
+	border-top: 1px solid black;
+	margin-top: 200px;
+	margin-left: 250px;
+}
+
+#logoHopital
+{
+	position: relative;
 	margin-top: 20px;
 }
 
