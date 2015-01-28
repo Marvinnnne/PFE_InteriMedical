@@ -11,30 +11,20 @@
 </head>
 <body>
 
-	<header class="header">
-		<div class="logText">
-			NOM prénom <!-- à remplacer par nom/prénom de l'utilisateur à aller cherchez dans la bdd -->
-		</div>
-		<div class ="logLink">
-			<a href="moncompte.html">Mon compte</a>
-			<a href="#">Déconnexion</a>
-		</div> 
-	</header>
+	<div id="head"></div>
 
 	<div class="container">
-
-		<div class="col-sm-2">
-			<a href="accueil.html"><img src="../../images/logo_urjob.jpg" /></a>
+<div class="col-sm-2" id="nav">			
 			<nav class="nav-link">
-				<ul>
-					<li><a href="accueil.html">Accueil</a></li>
-					<li><a href="demande.html">Demande d'intérimaire</a></li>
-					<li><a href="encours.html">Missions en cours</a></li>
-					<li><a href="validation.html">Validation des présences</a></li>
-					<li><a href="notes.html">Notes</a></li>
-					<li><a href="historique.html">Historique</a></li>
-					<li><a href="support.html">Support</a></li>
-					<li><a href="faq.html">F.A.Q</a></li>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+					<li role="presentation"> <a href="demande.html"> <span class="glyphicon glyphicon-search"></span>   Demande d'intérimaire</a></li>
+					<li role="presentation" class="active"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
+					<li role="presentation"> <a href="validation.html"> <span class="glyphicon glyphicon-user"></span>  Validation des présences</a></li>
+					<li role="presentation"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
+					<li role="presentation"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
+					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -124,5 +114,6 @@
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
+	<script src="../../js/dynamique.js" ></script>
 </body>
 </html>
