@@ -11,111 +11,142 @@
 </head>
 <body>
 
-	<header class="header">
-		<div class="logText">
-			NOM prénom <!-- à remplacer par nom/prénom de l'utilisateur à aller cherchez dans la bdd -->
-		</div>
-		<div class ="logLink">
-			<a href="moncompte.html">Mon compte</a>
-			<a href="#">Déconnexion</a>
-		</div> 
-	</header>
+	<div id="head"></div>
 
-	<div class="container">
-		<div class="col-sm-2">
-		<!--
-			<a href="accueil.html"><img src="../../images/logo_urjob.jpg" /></a>
+	<div class="container">	
+
+		<div class="col-sm-2" id="nav">			
 			<nav class="nav-link">
-				<ul>
-					<li><a href="accueil.html">Accueil</a></li>
-					<li><a href="support.html">Support</a></li>
-					<li><a href="faq.html">F.A.Q</a></li>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" class="active"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
 				</ul>
 			</nav>
-		-->
-			<div id="menu"></div>
 		</div>
 
 		<section class="col-sm-10">
-			<br>
-			<a href="ajoutcompte.html">Ajouter un nouveau compte</a>
-			<br><br>
+			<br/>
+			<form action="ajoutcompte.html">
+				<input type="submit" value="Ajouter un nouvel utilisateur">
+			</form> 
+			<br/>
 		</section>
+
+		<div class="col-sm-8" id="traitHorizontal"> </div>
 
 		<section class="col-sm-10">
 			<h1>GESTION DES COMPTES</h1>
 			<br>
 			<form method="post" action="">
-				<input type="search" placeholder="Recherche...">
-				<input type="button" value="Rechercher" />
+				<div class="col-sm-offset-3 col-sm-7">
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" aria-label="Left Align">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+						<input type="text" class="form-control" placeholder="Search for...">
+					</div>
+				</div> 
 				<section>	
-					<fieldset class="col-sm-8">
+					<fieldset class="col-sm-4">
 						<legend>Filtres</legend>
-						<label for="select">Unité</label>
-						<select name="select" id="select">
-							<option>Neurologie</option>
-							<option>Pédiatrie</option>
-							<option>Radiologie</option>
-						</select> <br>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+								Secteur
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurologie</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Soins Paliatifs</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurochirurgie</a></li>								
+							</ul>
+						</div>
 
-						<label for="nombre">Expiration dans moins de </label>
-						<input type="number" name="nombre"></input>	
-						<select name="temps">
-							<option>Année</option>
-							<option>Mois</option>
-							<option>Jours</option>
-						</select>
 					</fieldset>
 
-					<fieldset class="col-sm-4">
-						<legend>Trier par</legend>
-						<select name="filtre">
-							<option>Nom</option>
-							<option>Matricule</option>
-						</select>
-						<select name="ordre">
-							<option>Croissant</option>
-							<option>Décroissant</option>
-						</select>
+					<fieldset class="col-sm-offset-1 col-sm-7">
+						<legend>Trier par</legend>						
+						<div class="dropdown col-sm-4" >
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+								Nom
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu  dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Matricule</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Département</a></li>	
+							</ul>
+						</div>
+						<div class="dropdown col-sm-3">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+								Ordre
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Croissant</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Déroissant</a></li>							
+							</ul>
+						</div>
 					</fieldset>	
 				</section>
 			</form>
 		</section>
 
-		<section class="col-sm-10">
-			<section class="col-sm-12">
-				<div class="col-sm-10">
-					Compte 1<br>
-					Nom du titulaire : <br>
-					Période de validité : <br>
+		<section class="col-sm-10" id="comptes">
+			<section class="col-sm-12" id="compte">
+				<div class="col-sm-8">					
+					Nom du titulaire : Jean-Bon De Provence <br>
+					Période de validité : 01/01/2016 <br>
 				</div>
-				<div class="col-sm-2">
-					<a href="modifier.html">Modifier</a><br>
-					<a href="historique.html">Historique</a><br>	
+				<div class="dropdown col-sm-2" id="boutonCompte">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+						Modifier
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="modifier.html">Changer informations</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Etendre la durée</a></li>	
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Supprimer l'utilisateur</a></li>						
+					</ul>
 				</div>
+				<form action="historique.html" id="boutonCompte">
+					<input type="submit" value="Historique">
+				</form>  
 			</section>
-			<section class="col-sm-12">
-				<div class="col-sm-10">
-					Compte 2<br>
+			<section class="col-sm-12" id="compte">
+				<div class="col-sm-8">
 					Nom du titulaire : <br>
 					Période de validité : <br>
 				</div>
-				<div class="col-sm-2">
-					<a href="modifier.html">Modifier</a><br>
-					<a href="historique.html">Historique</a><br>
+				<div class="dropdown col-sm-2" id="boutonCompte">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+						Modifier
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="modifier.html">Changer informations</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Etendre la durée</a></li>	
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Supprimer l'utilisateur</a></li>						
+					</ul>
 				</div>
+				<form action="historique.html" id="boutonCompte">
+					<input type="submit" value="Historique">
+				</form>  
 			</section>
 		</section>
 	</div>
 
 	<footer>
-			<p class="text-center">Copyright &copy; Urjob 2014</p>
+		<p class="text-center">Copyright &copy; Urjob 2015</p>
 	</footer> 
 
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
 	<script src="../../js/smooth.js"></script>
-	<script src="../../js/menu.js"></script>
+	<script src="../../js/dynamique.js" ></script>
 </body>
 </html>

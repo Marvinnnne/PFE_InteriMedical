@@ -11,30 +11,20 @@
 </head>
 <body>
 
-	<header class="header">
-		<div class="logText">
-			NOM prénom <!-- à remplacer par nom/prénom de l'utilisateur à aller cherchez dans la bdd -->
-		</div>
-		<div class ="logLink">
-			<a href="moncompte.html">Mon compte</a>
-			<a href="#">Déconnexion</a>
-		</div> 
-	</header>
+	<div id="head"></div>
 
 	<div class="container">
-
-		<div class="col-sm-2">
-			<a href="accueil.html"><img src="../../images/logo_urjob.jpg" /></a>
+		<div class="col-sm-2" id="nav">			
 			<nav class="nav-link">
-				<ul>
-					<li><a href="accueil.html">Accueil</a></li>
-					<li><a href="demande.html">Demande d'intérimaire</a></li>
-					<li><a href="encours.html">Missions en cours</a></li>
-					<li><a href="validation.html">Validation des présences</a></li>
-					<li><a href="notes.html">Notes</a></li>
-					<li><a href="historique.html">Historique</a></li>
-					<li><a href="support.html">Support</a></li>
-					<li><a href="faq.html">F.A.Q</a></li>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+					<li role="presentation" class="active"> <a href="demande.html"> <span class="glyphicon glyphicon-search"></span>   Demande d'intérimaire</a></li>
+					<li role="presentation"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
+					<li> <a href="validation.html"> <span class="glyphicon glyphicon-user"></span>  Validation des présences</a></li>
+					<li role="presentation"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
+					<li role="presentation"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
+					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -42,21 +32,52 @@
 		<div class="col-sm-10">
 			<h1>Demander un nouvel intérimaire</h1>
 			<!-- les autres champs lié à la mission sont récupérer à partir des données de l'utilisateur (le cadre)-->
-			<form method="post" action="">
-				<label for="date_debut">Date de début</label> : <input type="date" name="date_debut" id="date_debut" required>
-				<label for="date_fin">Date de fin</label> : <input type="date" name="date_fin" id="date_fin" class="datepicker" data-date-format="dd/mm/yyyy" required><br>
-				<label for="horaire">Heure de service</label> : 
-				<select name="horaire" id="horaire">
-					<option value="1">0h-8h</option>
-					<option value="2" selected>8h-16h</option>
-					<option value="3">16h-0h</option>
-				</select>
-				<br>
-				<input type="button" value="Envoyer" />
-			</form>
-		</div>
-		
+			<section>
+				<form id="signup" method ="post" action="DJANGO">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Intitulé de mission*</span>
+						<input type="text" class="form-control" aria-describedby="basic-addon1" required autofocus>
+					</div>
+					<div class="form-group">
+						<label for="comment">Description* :</label>
+						<textarea class="form-control" rows="5" id="comment" required></textarea>
+					</div>	
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Date de Début*</span>
+						<input type="date" class="form-control" aria-describedby="basic-addon1" required>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Date de Fin*</span>
+						<input type="date" class="form-control" aria-describedby="basic-addon1" required>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">Durée (semaines)</span>
+						<input type="number" class="form-control" aria-describedby="basic-addon1" required>
+					</div>
+
+					<p id="avertissement">
+						Les éléments marqués d'un * sont obligatoires
+					</p>				
+					<button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Enregistrer</button>        
+				</form> 
+			</section>
+		</div>		
 	</div>
+
+	<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						Votre annonce a été envoyé. Les candidats peuvent maintenant répondre à votre annonce. <br/>
+						Vous recevre un mail de confirmation avec l'ID de l'annonce
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onClick=location.href="accueil.html">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<footer>
 		<p class="text-center">Copyright &copy; Urjob 2014</p>
@@ -65,5 +86,6 @@
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
+	<script src="../../js/dynamique.js" ></script>
 </body>
 </html>

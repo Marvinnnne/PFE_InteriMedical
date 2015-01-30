@@ -1,21 +1,7 @@
-body {
-  padding-top: 10px;
-}
-
 [class*="col-"], footer {
-  background-color: lightgreen;
-  border: 2px solid black;
-  border-radius: 6px;
-  line-height: 40px;
+  position: relative;
+  line-height: 40px;  
   text-align: center;
-}
-
-input:focus:required:invalid {
-  background: pink url(ico_validation.png) 379px 3px no-repeat;
-}
-input:required:valid {
-  background-color: #fff;
-  background-position: 379px -61px;
 }
 
 /* Just some base styles not needed for example to function */
@@ -27,15 +13,179 @@ body, form, ul, li, p, h2, h3, h4, h5
 	padding: 0;
 }
 
-img { border: none; }
 p
 {
 	font-size: 1em;
 	margin: 0 0 1em 0;
 }
-h2 { font-size: 14px; margin: 0 0 12px; }
 
-/* Form styles */
+h2 
+{ 
+	font-size: 14px; 
+	margin: 0 0 12px; 
+}
+
+header
+{
+	background-color: rgb(224,224,224);
+	border: 1px solid black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+img
+{
+	max-width: 100%;
+	height: auto;
+}
+
+fieldset
+{
+	text-align: left;
+	border:3px solid black;
+}
+
+#logoUrjob
+{
+	position: relative;
+    left: 50%;
+    width: 40px; 
+    height : 40px;
+}
+
+#nav
+{
+	text-align: center;
+	background-color: rgb(224,224,224);
+	border: 1px solid black;
+	float : left;
+	margin-bottom: 20%;
+}
+
+#niveau1
+{
+	float: right;
+}
+
+ul#niveau1 ul#niveau2
+{
+	display: none;
+}
+
+ul#niveau1 .survol:hover ul#niveau2
+{
+	display: block;
+	left: -20px
+}
+
+#Notif
+{	
+	margin-top: 20px;
+	border: 2px solid black;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+
+#rappel
+{
+	background-color: rgb(224,224,224);	
+	text-align: left;
+}
+
+#mission
+{
+	background-color: rgb(224,224,224);	
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+#traitVertical
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-left: 1px solid black;
+    padding-left: 5px;
+    margin-left: 50px;
+}
+
+#traitHorizontal
+{
+	position: relative;
+	border-top: 1px solid black;
+	margin-left: 8.33%;
+}
+
+#logoHopital
+{
+	position: relative;
+	margin-top: 20px;
+}
+
+#notes
+{
+    height: 150px;
+    overflow-y: scroll;
+    border: 3px solid black;
+}
+
+#myModal, #fichiers
+{
+	border: 3px solid black;
+}
+
+#boutonPop
+{
+	position: relative;
+    right: 50%;
+}
+
+#comptes
+{
+	margin-top: 20px;
+	border: 3px solid black;
+	height: 200px;
+    overflow-y: scroll;
+}
+
+#compte
+{
+	background-color: rgb(224,224,224);	
+	text-align: left;
+	margin-top: 20px;
+}
+
+#encours
+{
+	margin-top: 20px;
+	border: 3px solid black;
+	height: 400px;
+    overflow-y: scroll;
+}
+
+#boutonCompte
+{
+	margin-top: 15px;
+}
+
+input:focus:required:invalid 
+{
+  background: pink url(ico_validation.png) 379px 3px no-repeat;
+}
+
+input:required:valid 
+{
+  background-color: #fff;
+  background-position: 379px -61px;
+}
+
+
+/* CSS Formulaire */ 
+
+.input-group
+{
+	margin-top: 20px;
+}
+
 #signup
 {
 	margin: 20px auto;
@@ -135,3 +285,10 @@ h2 { font-size: 14px; margin: 0 0 12px; }
 	background-color: #fff;
 	background-position: 379px -61px;
 }
+
+#avertissement
+{
+	background-color: red;
+	margin-top: 20px;
+}
+
