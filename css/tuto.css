@@ -152,6 +152,14 @@ ul#niveau1 .survol:hover ul#niveau2
 	margin-top: 20px;
 }
 
+#encours
+{
+	margin-top: 20px;
+	border: 3px solid black;
+	height: 400px;
+    overflow-y: scroll;
+}
+
 #boutonCompte
 {
 	margin-top: 15px;
@@ -286,7 +294,6 @@ input:required:valid
 	background-color: #fff;
 	background-position: 379px -61px;
 }
-
 
 #avertissement
 {
