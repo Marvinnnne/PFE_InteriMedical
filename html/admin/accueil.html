@@ -26,14 +26,16 @@
 		</div>
 
 		<section class="col-sm-10">
+			<br/>
 			<form action="ajoutcompte.html">
 				<input type="submit" value="Ajouter un nouvel utilisateur">
-			</form>  
+			</form> 
+			<br/>
 		</section>
 
-		<div id="traitHorizontal"> </div>
+		<div class="col-sm-8" id="traitHorizontal"> </div>
 
-		<section class="col-sm-offset-2 col-sm-10">
+		<section class="col-sm-10">
 			<h1>GESTION DES COMPTES</h1>
 			<br>
 			<form method="post" action="">
@@ -62,13 +64,6 @@
 							</ul>
 						</div>
 
-						<!--<label for="nombre">Expiration dans moins de </label>
-						<input type="number" name="nombre"></input>	
-						<select name="temps">
-							<option>Année</option>
-							<option>Mois</option>
-							<option>Jours</option>
-						</select> -->
 					</fieldset>
 
 					<fieldset class="col-sm-offset-1 col-sm-7">
@@ -98,7 +93,7 @@
 			</form>
 		</section>
 
-		<section class="col-sm-offset-2 col-sm-10" id="comptes">
+		<section class="col-sm-10" id="comptes">
 			<section class="col-sm-12" id="compte">
 				<div class="col-sm-8">					
 					Nom du titulaire : Jean-Bon De Provence <br>
@@ -110,15 +105,16 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Changer informations</a></li>
+
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="modifier.html">Changer informations</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Etendre la durée</a></li>	
 						<li role="presentation" class="divider"></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Supprimer l'utilisateur</a></li>						
 					</ul>
 				</div>
-				<div class="col-sm-2" id="boutonCompte">
-					<input type="button" name="nom" value="Historique"></input>	
-				</div>
+				<form action="historique.html" id="boutonCompte">
+					<input type="submit" value="Historique">
+				</form>  
 			</section>
 			<section class="col-sm-12" id="compte">
 				<div class="col-sm-8">
@@ -131,21 +127,21 @@
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Changer informations</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="modifier.html">Changer informations</a></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Etendre la durée</a></li>	
 						<li role="presentation" class="divider"></li>
 						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Supprimer l'utilisateur</a></li>						
 					</ul>
 				</div>
-				<div class="col-sm-2" id="boutonCompte">
-					<input type="button" name="nom" value="Historique"></input>	
-				</div>
+				<form action="historique.html" id="boutonCompte">
+					<input type="submit" value="Historique">
+				</form>  
 			</section>
 		</section>
 	</div>
 
 	<footer>
-		<p class="text-center">Copyright &copy; Urjob 2014</p>
+		<p class="text-center">Copyright &copy; Urjob 2015</p>
 	</footer> 
 
 	<!--JavaScripts -->
