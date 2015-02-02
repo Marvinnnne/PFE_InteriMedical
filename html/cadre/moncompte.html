@@ -46,10 +46,24 @@
 					<label for="telportable">Téléphone (portable)</label> : <input type="tel" name="telportable" id="telportable">
 				</fieldset>
 				<br>
-				<input type="button" value="Enregistrer" />
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#Confirm" id="boutonPop"> Enregistrer </button>
+				</div>
 			</form>
 		</div>
+	</div>
 
+	<!-- Confirmation -->
+	<div class="modal fade bs-example-modal-lg" id="Confirm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">				
+				<p> Êtes vous sur d'enregistrer les changements ? </p>				
+					<div class="btn-toolbar" role="toolbar" aria-label="...">
+						<button type="button" class="btn btn-success" onClick=location.href="moncompte.html">Ok</button>
+						<button type="button" class="btn btn-danger" onClick=location.href="moncompte.html">Annuler</button>
+					</div>
+			</div>
+		</div>
 	</div>
 
 	<footer>
