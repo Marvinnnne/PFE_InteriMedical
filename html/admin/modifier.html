@@ -11,21 +11,21 @@
 </head>
 <body>
 
-	<div id="head"></div>
+	<div id="headAdm"></div>
 
-	<div class="container">
+	<div class="col-sm-2" id="nav">			
+		<nav class="nav-link">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+				<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+				<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
+			</ul>
+		</nav>
+	</div>
 
-		<div class="col-sm-2" id="nav">			
-			<nav class="nav-link">
-				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
-					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
-					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
-				</ul>
-			</nav>
-		</div>
-
-		<div class="col-sm-10">
+	<div class="container" id="main">
+		<div class="col-sm-offset-2 col-sm-10">
+			<h1>Modification compte Cadre</h1>
 			<form method="post" action="">
 				<fieldset class="col-sm-12">
 					<legend>Identité</legend>
@@ -40,7 +40,7 @@
 						</select>
 				</fieldset>
 				<fieldset class="col-sm-12">
-					<legend>Changement mot de passe</legend>
+					<legend>Mot de passe</legend>
 					<label for="oldpassword">Ancien mot de passe</label> : <input type="password" name="oldpassword" id="oldpassword"> <br>
 					<label for="newpassword1">Nouveau mot de passe</label> : <input type="password" name="newpassword1" id="newpassword1">
 					<label for="newpassword2">Confirmer nouveau mot de passe</label> : <input type="password" name="newpassword2" id="newpassword2">
@@ -58,13 +58,12 @@
 	</div>
 
 	<footer>
-			<p class="text-center">Copyright &copy; Urjob 2014</p>
+			<p class="text-center">Copyright &copy; Urjob 2015</p>
 	</footer> 
 
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
-	<script src="../../js/smooth.js"></script>
-	<script src="../../js/dynamique.js" ></script>
+	<script src="../../js/headerAdm.js"></script>
 </body>
 </html>

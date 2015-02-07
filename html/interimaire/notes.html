@@ -11,71 +11,119 @@
 </head>
 <body>
 
-	<div id="head"></div>
+	<div id="headInt"></div>
 
-	<div class="container">
-		<div class="col-sm-2" id="nav">			
-			<nav class="nav-link">
-				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
-					<li role="presentation"> <a href="annonces.html"> <span class="glyphicon glyphicon-search"></span>   Annonces</a></li>
-					<li role="presentation"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
-					<li role="presentation"  class="active"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
-					<li role="presentation"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
-					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
-					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
-				</ul>
-			</nav>
-		</div>
+	<div class="col-sm-2" id="nav">			
+		<nav class="nav-link">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+				<li role="presentation"> <a href="annonces.html"> <span class="glyphicon glyphicon-search"></span>   Annonces</a></li>
+				<li role="presentation"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
+				<li role="presentation"  class="active"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
+				<li role="presentation"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
+				<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+				<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="container" id="main">
 
 		<!-- faire script qui liste l'ensemble des missions non notées par le cadre-->
-		<div class="col-sm-10">
+		<div class="col-sm-offset-2 col-sm-10" >
 			<h1>Notes en attentes</h1>
-			<br>
-			<section class="col-sm-12">
+			<br>			
+		</div>
+
+		<!-- liste l'ensemble des missions ou le résultat de la recherche-->
+		<section class="col-sm-offset-2 col-sm-10" id="missions">			
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
 				<div class="col-sm-4">
-					Cadre : <br>
-					Unité : <br>
-					Missions : <br>
+					Cadre : Jean Dharme <br>
+					Unité : Neurologie <br>
+					Missions : Assistant bloc opératoire<br>
 				</div>
-				<div class="col-sm-4">
-					Date de début : <br>
-					Date de fin : <br>
-				</div>
-				<div class="col-sm-2">
-					<img src="../../images/logo_hopital.jpg" />
-				</div>
-				<div class="col-sm-2">
-					<input type="button" value="Noter" />
-				</div>
-			</section>
-			<section class="col-sm-12">
-				<div class="col-sm-4">
-					Cadre : <br>
-					Unité : <br>
-					Missions : <br>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
 				</div>
 				<div class="col-sm-4">
-					Date de début : <br>
-					Date de fin : <br>
+					Date de début : 01/11/2014 <br>
+					Date de fin : 02/02/2015 <br>
+					Durée : 3 mois	
 				</div>
-				<div class="col-sm-2">
-					<img src="../../images/logo_hopital.jpg"/>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/Poitiers.jpg" />
 				</div>
-				<div class="col-sm-2">
-					<input type="button" value="Noter"/>
+			</section>		
+		</section>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">				
+				<section class="col-sm-12">
+					<div class="col-sm-5">
+						Lieu : CHU Poitiers <br>
+						Unité : Neurologie <br>
+						Missions : Assistant bloc opératoire<br>
+						Cadre : Jean Dharme <br>
+					</div>						
+					<div class="col-sm-5">
+						Date de début : 01/11/2014 <br>
+						Date de fin : 02/02/2015 <br>
+						Durée : 3 mois	
+					</div>
+					<div class="col-sm-2" id="logoHopital2">
+						<img src="../../images/Poitiers.jpg" />
+					</div>
+				</section>	
+				<fieldset class="col-sm-12" id="field" >
+					<legend>Notes</legend>
+					<div id="notes">
+						<label>Accueil :</label>  <input type="number"> / 20 <label>Rem : </label>   <input type="text"> <br>  
+						<label>Cadre : </label>  <input type="number"> / 20 <label>Rem : </label>   <input type="text"> <br>  
+						<label>Accès : </label>  <input type="number"> / 20 <label>Rem : </label>   <input type="text"> <br>  
+						<label>Ambiance de travail : </label>  <input type="number"> / 20 <label>Rem : </label>   <input type="text"> <br>  
+					</div>
+				</fieldset>				
+				<fieldset class="col-sm-12" id="field">					
+					<legend>Mes fichiers</legend>
+					<div id="fichiers">
+						<label> Fiche de paie :</label> <a href=""> Télécharger </a>
+						<label> Justificatif de mission : </label> <a href=""> Télécharger </a>
+					</div>
+				</fieldset>							
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#Confirm" id="boutonPop">Valider</button>
 				</div>
-			</section>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Confirmation -->
+	<div class="modal fade bs-example-modal-lg" id="Confirm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">				
+				<p> Vous vous appretez à noter l'intérimaire. <br>
+					C'est irréversible <br>
+					Appuyez sur OK pour valider ou annuler sinon </p>				
+					<div class="btn-toolbar" role="toolbar" aria-label="...">
+						<button type="button" class="btn btn-success" onClick=location.href="notes.html">Ok</button>
+						<button type="button" class="btn btn-danger" onClick=location.href="notes.html">Annuler</button>
+					</div>
+				</div>
 		</div>
 	</div>
 
 	<footer>
-		<p class="text-center">Copyright &copy; Urjob 2014</p>
+		<p class="text-center">Copyright &copy; Urjob 2015</p>
 	</footer> 
 
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
-	<script src="../../js/dynamique.js" ></script>
+	<script src="../../js/headerInt.js" ></script>
 </body>
 </html>

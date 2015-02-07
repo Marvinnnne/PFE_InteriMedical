@@ -1,6 +1,6 @@
 [class*="col-"], footer {
   position: relative;
-  line-height: 40px;  
+  line-height: 35px;  
   text-align: center;
 }
 
@@ -25,14 +25,6 @@ h2
 	margin: 0 0 12px; 
 }
 
-header
-{
-	background-color: rgb(224,224,224);
-	border: 1px solid black;
-	font-size: 18px;
-	font-weight: bold;
-}
-
 img
 {
 	max-width: 100%;
@@ -45,6 +37,11 @@ fieldset
 	border:3px solid black;
 }
 
+#main
+{
+	padding: 41px 0px 0px 0px;
+}
+
 #logoUrjob
 {
 	position: relative;
@@ -53,14 +50,38 @@ fieldset
     height : 40px;
 }
 
+header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: rgb(224,224,224);
+	border-bottom: 1px solid black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 #nav
 {
+	position: fixed;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 41px;
+	border-right: 1px solid black;
+	background-color: rgb(235,235,235);
 	text-align: center;
-	background-color: rgb(224,224,224);
-	border: 1px solid black;
-	float : left;
-	margin-bottom: 20%;
 }
+
+.nav-pills>li>a {
+	border-radius: 0px;
+	padding: 5px 8px;
+}
+
 
 #niveau1
 {
@@ -84,19 +105,44 @@ ul#niveau1 .survol:hover ul#niveau2
 	border: 2px solid black;
 	border-radius: 6px;
 	margin-bottom: 15px;
+	padding: 0px;
+	box-shadow: 3px 3px 10px  #aaaaaa;
 }
 
 #rappel
 {
 	background-color: rgb(224,224,224);	
 	text-align: left;
+	padding-left: 10px;
+	border-radius: 4px 4px 0px 0px;
+}
+
+#missions
+{
+	border: 1px solid black;
+	height: 400px;
+	overflow-y: scroll;
+	padding: 5px 5px 5px 5px;;
 }
 
 #mission
 {
 	background-color: rgb(224,224,224);	
 	text-align: left;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+	border-radius: 4px;	
+	box-shadow: 0px 0px 3px 2px #aaaaaa;
+	padding: 0px 0px 0px 0px;
+}
+
+#mission:hover
+{
+	background-color: rgb(200,200,200);
+}
+
+#annonce
+{
+	padding: 0;
 }
 
 #traitVertical
@@ -112,25 +158,61 @@ ul#niveau1 .survol:hover ul#niveau2
 {
 	position: relative;
 	border-top: 1px solid black;
-	margin-left: 8.33%;
 }
 
 #logoHopital
+{
+	/* position: relative; */
+	/* margin-top: 1%; */
+	background-color: white;
+	border-left: 1px solid black;
+	padding: 15px 15px 15px 15px;
+	margin-left: 28px;
+	border-radius: 0px 5px 5px 0px;
+}
+
+#logoHopital2
 {
 	position: relative;
 	margin-top: 20px;
 }
 
+legend {
+	width: 15%;
+	margin-bottom: 0;
+	color: #333;
+	border-bottom: 0;
+	text-align: left;
+}
+
+#field
+{
+	margin: 0px 0px 0px 10px;
+	width: 98%;
+	border: 2px solid black;
+}
+
+#modifCompte
+{
+	width: 16%
+}
+
+button, input, select, textarea
+{
+	line-height: 20px; 
+}
+
 #notes
 {
-    height: 150px;
-    overflow-y: scroll;
-    border: 3px solid black;
+    height: 130px;
+    line-height: 25px;
+    /*overflow-y: scroll;
+    border: 3px solid black;*/
 }
 
 #myModal, #fichiers
 {
-	border: 3px solid black;
+	/*border: 3px solid black;*/  
 }
 
 #boutonPop

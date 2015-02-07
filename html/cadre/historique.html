@@ -11,58 +11,57 @@
 </head>
 <body>
 
-	<div id="head"></div>
+	<div id="headCad"></div>
 
-	<div class="container">
+	<div class="col-sm-2" id="nav">			
+		<nav class="nav-link">
+			<ul class="nav nav-pills nav-stacked">
+				<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
+				<li role="presentation"> <a href="demande.html"> <span class="glyphicon glyphicon-search"></span>   Demande d'intérimaire</a></li>
+				<li role="presentation"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
+				<li role="presentation"> <a href="validation.html"> <span class="glyphicon glyphicon-user"></span>  Validation des présences</a></li>
+				<li role="presentation"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
+				<li role="presentation" class="active"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
+				<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+				<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
+			</ul>
+		</nav>
+	</div>
 
-		<div class="col-sm-2" id="nav">			
-			<nav class="nav-link">
-				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
-					<li role="presentation"> <a href="demande.html"> <span class="glyphicon glyphicon-search"></span>   Demande d'intérimaire</a></li>
-					<li role="presentation"> <a href="encours.html"> <span class="glyphicon glyphicon-pencil"></span>   Missions en cours</a></li>
-					<li role="presentation"> <a href="validation.html"> <span class="glyphicon glyphicon-user"></span>  Validation des présences</a></li>
-					<li role="presentation"> <a href="notes.html"> <span class="glyphicon glyphicon-list-alt"></span>   Notes</a></li>
-					<li role="presentation" class="active"> <a href="historique.html"> <span class="glyphicon glyphicon-book"></span>  Historique</a></li>
-					<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
-					<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
-				</ul>
-			</nav>
-		</div>
+	<div class="container" id="main">
 		
-		<div class="col-sm-10">
+		<div class="col-sm-offset-2 col-sm-10">
 			<h1>Historique des missions</h1>
-			<br>
 			<form method="post" action="">				
 				<section>	
 					<fieldset class="col-sm-7">
 						<legend>Filtres</legend>
-						<div class="input-group col-sm-1">
-							<span class="input-group-addon" id="basic-addon1">Date de Début*</span>
-							<input type="date" class="form-control" aria-describedby="basic-addon1" required>
-						</div>
-						<div class="input-group col-sm-1">
-							<span class="input-group-addon" id="basic-addon1">Date de Fin*</span>
-							<input type="date" class="form-control" aria-describedby="basic-addon1" required>
-						</div>
-					</fieldset>
+						<span class="input-group col-sm-2">
+							<span class="input-group-addon" id="basic-addon1">Début*</span>
+							<input type="date" class="form-control" >
 
-					<fieldset class="col-sm-offset-1 col-sm-4">
-						<legend>Trier par</legend>						
-						<div class="dropdown col-sm-4" >
+							<span class="input-group-addon" id="basic-addon1">Fin*</span>
+							<input type="date" class="form-control" >
+						</span>
+					</fieldset>								
+
+					<fieldset class="col-sm-5">
+						<legend>Trier par</legend>
+
+						<div class="dropdown col-sm-6" >
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-								ID
+								Date de début
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu  dropdown-menu-right" role="menu" aria-labelledby="dLabel">
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Unité</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Date de début</a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Spécialité</a></li>
 								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lieu</a></li>	
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Date de début</a></li>	
 							</ul>
 						</div>
 						<div class="dropdown col-sm-3">
 							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-								Ordre
+								Croissant
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
@@ -76,59 +75,61 @@
 		</div>
 
 		<!-- liste l'ensemble des missions ou le résultat de la recherche-->
-		<section class="col-sm-10" id="encours">			
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : Marvin Leemans-Dolo <br>
-						Unité : GIGN <br>
-						Missions : Jouer à Docteur Maboul<br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : 01/01/1969 <br>
-						Date de fin : 31/12/1977 <br>
-						Durée : 75 ans	
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/Poitiers.jpg" />
-					</div>
-				</section>				
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : <br>
-						Unité : <br>
-						Missions : <br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : <br>
-						Date de fin : <br>
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/saint-maurice.jpg" />
-					</div>
-				</section>
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : <br>
-						Unité : <br>
-						Missions : <br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : <br>
-						Date de fin : <br>	
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/Henri_Mondor.jpg" />
-					</div>
-				</section>			
+		<section class="col-sm-offset-2  col-sm-10" id="missions">			
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
+				<div class="col-sm-4">
+					Intérimaire : Marvin Leemans-Dolo <br>
+					Unité : Soins Paliatifs <br>
+					Missions : Encadrer les patients<br>
+				</div>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
+				</div>
+				<div class="col-sm-4">
+					Date de début : 01/01/2015 <br>
+					Date de fin : 31/12/2016 <br>
+					Durée : 48 semaines	
+				</div>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/Poitiers.jpg" />
+				</div>
+			</section>				
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
+				<div class="col-sm-4">
+					Intérimaire : Pierre Evrard <br>
+					Unité : Cardiologie<br>
+					Missions : Assister en chirurgie<br>
+				</div>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
+				</div>
+				<div class="col-sm-4">
+					Date de début : 15/08/2013<br>
+					Date de fin : 31/08/2013<br>
+					Durée : 2 semaines	
+				</div>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/saint-maurice.jpg" />
+				</div>
+			</section>
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
+				<div class="col-sm-4">
+					Intérimaire : Vicky Chooramun<br>
+					Unité : Psychatrie<br>
+					Missions : Accompagner les patients<br>
+				</div>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
+				</div>
+				<div class="col-sm-4">
+					Date de début : 02/02/2015<br>
+					Date de fin : 02/03/2015<br>	
+					Durée : 4 semaines	
+				</div>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/Henri_Mondor.jpg" />
+				</div>
+			</section>			
 		</section>
 	</div>
 
@@ -137,32 +138,33 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">				
 				<section class="col-sm-12">
-					<div class="col-sm-5">
-						Lieu : CHU Poitiers <br>
-						Unité : GIGN <br>
-						Missions : Jouer à Docteur Maboul<br>
-						Intérimaire : Marvin Leemans-Dolo <br>	
-					</div>						
-					<div class="col-sm-5">
-						Date de début : 01/01/1969 <br>
-						Date de fin : 31/12/1977 <br>
-						Durée : 75 ans	
+					<div class="col-sm-4">
+						Intérimaire : Marvin Leemans-Dolo <br>
+						Unité : Soins Paliatifs <br>
+						Missions : Encadrer les patients<br>
 					</div>
-					<div class="col-sm-2" id="logoHopital">
+					<div class="col-sm-1" id="traitVertical">	
+						<br><br><br>					
+					</div>
+					<div class="col-sm-4">
+						Date de début : 01/01/2015 <br>
+						Date de fin : 31/12/2016 <br>
+						Durée : 48 semaines	
+					</div>
+					<div class="col-sm-2" id="logoHopital2">
 						<img src="../../images/Poitiers.jpg" />
 					</div>
 				</section>	
-				<fieldset class="col-sm-12" >
+				<fieldset class="col-sm-12" id="field">
 					<legend>Notes</legend>
 					<div id="notes">
 						<label>Ponctualité : </label>  15 /20  <label>Rem : </label>   Rarement en retard <br>   
 						<label>Intégration : </label>  10 /20  <label>Rem : </label>   Très réservé et solitaire  <br>   
 						<label>Implication : </label> 18 /20    <label>Rem : </label> Implication avec un grand I  <br>   
 						<label>Communication : </label> 8 /20   <label>Rem : </label> Il a donné sa langue au chat  <br>   
-						<label>Loyauté : </label> 5 /20    <label>Rem : </label> Pire qu'un Lannister <br>
 					</div>
 				</fieldset>
-				<fieldset class="col-sm-12">					
+				<fieldset class="col-sm-12" id="field">					
 					<legend>Mes fichiers</legend>
 					<div id="fichiers">
 						<label> Fiche de paie :</label> <a href=""> Télécharger </a>
@@ -177,12 +179,12 @@
 	</div>
 
 	<footer>
-		<p class="text-center">Copyright &copy; Urjob 2014</p>
+		<p class="text-center">Copyright &copy; Urjob 2015</p>
 	</footer> 
 
 	<!--JavaScripts -->
 	<script src="../../js/LibsJS/jquery-1.11.1.min.js"></script>
 	<script src="../../js/LibsJS/bootstrap.min.js"></script>
-	<script src="../../js/dynamique.js" ></script>
+	<script src="../../js/HeaderCad.js" ></script>
 </body>
 </html>
