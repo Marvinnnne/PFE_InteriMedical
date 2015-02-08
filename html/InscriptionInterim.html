@@ -9,7 +9,7 @@
 
   <!-- CSS links -->
   <link href="../css/LibsCSS/bootstrap.min.css" rel="stylesheet" />
-  <link href="../css/tuto.css" rel="stylesheet">   
+  <link href="../css/tuto.css" type="text/css" rel="stylesheet">   
 </head>
 
 <body>
@@ -48,32 +48,87 @@
       </center>
     </div>
   </section>
-  <section class="col-sm-12" style ="margin-top : 13%;">
+
+  <section class="col-sm-12">
     <div class="container">
-      <form method ="post" action="DJANGO">
+      <h1> Inscription </h1>
         <fieldset>
-          <legend>Identité du cadre</legend>
-          <label for="nom"> Nom : </label> <input type="text" name="nom" id="nom" required/>
-          <label for="prenom"> Prénom : </label> <input type="text" name="prénom" id="prenom" required/>
-          <label for="DdN"> Date de naissance : </label> <input type="date" name="DdN" id="DdN"/ required>
-          <label for="specialite"> Specialité : </label> <br/>
-          <input type="checkbox" name="Neurologie" id="Neurologie" /> <label for="Neurologie"> Neurologie </label>
-          <input type="checkbox" name="spermicide" id="spermicide" /> <label for="spermicide"> spermicide </label>
-          <label for="Adresse"> Adresse : </label> <input type="text" name="Adresse" id="Adresse" required/>
-          <label for="CP"> Code Postal : </label> <input type="number" name="CP" id="CP" maxlength="5"required/>
-          <label for="Ville"> Ville : </label> <input type="text"  name="Ville" id="Ville" required/>
-          <label for="email"> Email : </label> <input type="email"  name="email" id="email" required/>
-          <label for="telPort"> Téléphone du portable : </label> <input type="tel"  name="telPort" id="telPort" required/>
+          <legend> Identité</legend>
+          <form id="signup" method ="post" action="DJANGO">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Nom*</span>
+              <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" required autofocus>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Prénom*</span>
+              <input type="text" class="form-control" placeholder="Firstname" aria-describedby="basic-addon1" required>
+            </div>  
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Date de naissance*</span>
+              <input type="date" class="form-control" placeholder="Firstname" aria-describedby="basic-addon1" required>
+            </div>                  
+            <label for="specialite"> Specialité* </label>
+            <select name="specialite" id="specialite" class="form-control" required>
+              <option value="Cardiologie">Cardiologie</option>
+              <option value="Neurologie">Neurologie</option>
+              <option value="Radiologie">Radiologie</option>
+            </select>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Adresse*</span>
+              <input type="text" class="form-control" placeholder="10 avenue gécko" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Code Postal*</span>
+              <input type="number" class="form-control" placeholder="94800" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Email*</span>
+              <input type="email" class="form-control" placeholder="holéholé@mamamia.msn" aria-describedby="basic-addon1" name="email" id="email" required>
+              <p class="validation01">
+                <span class="invalid">Please enter a valid email address e.g. ryan@example.com</span>
+                <span class="valid">Thank you for entering a valid email</span>
+              </p>
+            </div>          
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Téléphone portable*</span>
+              <input type="tel" class="form-control" placeholder="0612345678" aria-describedby="basic-addon1" name="telPoste" id="tel" pattern="\d{10}" required>
+              <p class="validation01">
+                <span class="invalid">No spaces or brackets e.g. 0390001234</span>
+                <span class="valid">That's what we wanted!</span>
+              </p>
+            </div>  
         </fieldset>
         <fieldset>
           <legend>Mes fichiers</legend>
           <label for="DIP"> Diplôme : </label> <input type="file" name="DIP">
           <label for="CNI"> Carte de d'identité : </label> <input type="file" name="CNI">
           <label for="CSC"> Carte de sécurité sociale : </label> <input type="file" name="CSC">
-        </fieldset>         
+        </fieldset> 
+        <p id="avertissement">
+          Les éléments marqués d'un * sont obligatoires.
+
+          Un mail avec le mot de passe et l'identifiant vous sera envoyés.
+        </p>        
       </form>
-      <button class="btn btn-primary" type="submit">Enregistrer</button>
+      <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Enregistrer</button>  
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          Vous venez de créer un nouveau compte. <br/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onClick=location.href="Urjob.html">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/LibsJS/jquery-1.11.1.min.js"></script>
+  <script src="../js/LibsJS/bootstrap.min.js"></script>
 </body>
 </html>

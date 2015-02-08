@@ -177,8 +177,15 @@ ul#niveau1 .survol:hover ul#niveau2
 	margin-top: 20px;
 }
 
+input[type=date]
+{
+  padding: 0px 0px 0px 5px;
+  width: auto;
+
+}
+
 legend {
-	width: 15%;
+	width: 10%;
 	margin-bottom: 0;
 	color: #333;
 	border-bottom: 0;
