@@ -33,7 +33,7 @@
 		<section class="col-sm-offset-5 col-sm-4" id="Notif" >
 			<h3 id="rappel"> Rappel </h3>
 			<!-- faire script qui vérifie si il a des missions à valider ou  à noter, si aucune dans les 2 cas alors afficher texte "Missions à jour"-->   
-			<a href="validation.html">Vous avez 3 missions non validées</a><br>          		
+			<a href="validation.html">Vous avez 2 missions non validées</a><br>          		
 			<a href="notes.html">Vous avez 1 mission non notée</a><br>
 		</section>
 
@@ -42,60 +42,42 @@
 		<section class="col-sm-offset-2 col-sm-10">			
 			<h1>Vos 3 dernières missions</h1>
 			<!-- faire script qui liste les 3 dernières missions de l'utilisateur-->			
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : Marvin Leemans-Dolo <br>
-						Unité : Soins Paliatifs <br>
-						Missions : Encadrer les patients<br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : 01/01/2015 <br>
-						Date de fin : 31/12/2016 <br>
-						Durée : 48 semaines	
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/Poitiers.jpg" />
-					</div>
-				</section>				
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : Pierre Evrard <br>
-						Unité : Cardiologie<br>
-						Missions : Assister en chirurgie<br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : 15/08/2013<br>
-						Date de fin : 31/08/2013<br>
-						Durée : 2 semaines	
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/saint-maurice.jpg" />
-					</div>
-				</section>
-				<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
-					<div class="col-sm-4">
-						Intérimaire : Vicky Chooramun<br>
-						Unité : Psychatrie<br>
-						Missions : Accompagner les patients<br>
-					</div>
-					<div class="col-sm-1" id="traitVertical">	
-						<br><br><br>					
-					</div>
-					<div class="col-sm-4">
-						Date de début : 02/02/2015<br>
-						Date de fin : 02/03/2015<br>	
-						Durée : 4 semaines	
-					</div>
-					<div class="col-sm-2" id="logoHopital">
-						<img src="../../images/Henri_Mondor.jpg" />
-					</div>
-				</section>			
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">
+				<div class="col-sm-4">
+					Intérimaire : Laje Carl<br>
+					Unité : Radiologie <br>
+					Missions : Assistant salle de radio<br>
+				</div>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
+				</div>
+				<div class="col-sm-4">
+					Date de début : 03/03/2014 <br>
+					Date de fin : 06/10/2014<br>
+					Durée : 7 mois	
+				</div>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/saint-maurice.jpg" />
+				</div>
+			</section>
+			<section class="col-sm-12" id="mission" class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal2">
+				<div class="col-sm-4">
+					Intérimaire :  Tim Marie<br>
+					Unité : Radiologie <br>
+					Missions : Assistant salle de radio<br>
+				</div>
+				<div class="col-sm-1" id="traitVertical">	
+					<br><br><br>					
+				</div>
+				<div class="col-sm-4">
+					Date de début : 01/11/2014 <br>
+					Date de fin : 26/01/2015 <br>
+					Durée : 3 mois	
+				</div>
+				<div class="col-sm-2" id="logoHopital">
+					<img src="../../images/saint-maurice.jpg" />
+				</div>
+			</section>					
 		</section>
 	</div>
 
@@ -105,27 +87,70 @@
 			<div class="modal-content">				
 				<section class="col-sm-12">
 					<div class="col-sm-5">
-						Lieu : CHU Poitiers <br>
-						Unité : Soins Paliatifs <br>
-						Missions : Encadrer les patients<br>
-						Intérimaire : Marvin Leemans-Dolo <br>	
+						Lieu : Hopitaux de St-Maurice <br>
+						Unité : Radiologie <br>
+						Missions : Assistant salle de radio<br>
+						Intérimaire : Laje Carl<br>	
 					</div>						
 					<div class="col-sm-5">
-						Date de début : 01/01/2015 <br>
-						Date de fin : 31/12/2016 <br>
-						Durée : 48 semaines		
+						Date de début : 03/03/2014 <br>
+						Date de fin : 06/10/2014<br>
+						Durée : 7 mois
 					</div>
 					<div class="col-sm-2" id="logoHopital2">
-						<img src="../../images/Poitiers.jpg" />
+						<img src="../../images/saint-maurice.jpg" />
 					</div>
 				</section>	
 				<fieldset class="col-sm-12" id="field">
 					<legend>Notes</legend>
 					<div id="notes">
-						<label>Ponctualité : </label>  15 /20  <label>Rem : </label>   Rarement en retard <br>   
-						<label>Intégration : </label>  10 /20  <label>Rem : </label>   Très réservé et solitaire  <br>   
+						<label>Ponctualité : </label>  10 /20  <label>Rem : </label> Pas toujours à l'heure <br>   
+						<label>Intégration : </label>  18 /20  <label>Rem : </label> Très bonne intégration à l'équipe<br>   
+						<label>Implication : </label> 15 /20    <label>Rem : </label> bien impliqué dans son travail<br>   
+						<label>Communication : </label> 18 /20   <label>Rem : </label> Très bon relationnel<br>   
+					</div>
+				</fieldset>
+				<fieldset class="col-sm-12" id="field">					
+					<legend>Mes fichiers</legend>
+					<div id="fichiers">
+						<label> Fiche de paie :</label> <a href=""> Télécharger </a>
+						<label> Justificatif de mission : </label> <a href=""> Télécharger </a>
+					</div>
+				</fieldset>							
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal" onClick=location.href="accueil.html" id="boutonPop">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Modal2 -->
+	<div class="modal fade bs-example-modal-lg" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">				
+				<section class="col-sm-12">
+					<div class="col-sm-5">
+						Lieu : Hopitaux de St-Maurice <br>
+						Unité : Radiologie <br>
+						Missions : Assistant salle de radio<br>
+						Intérimaire : Tim Marie<br>		
+					</div>						
+					<div class="col-sm-5">
+						Date de début : 01/11/2014 <br>
+						Date de fin : 26/01/2015 <br>
+						Durée : 3 mois	
+					</div>
+					<div class="col-sm-2" id="logoHopital2">
+						<img src="../../images/saint-maurice.jpg" />
+					</div>
+				</section>	
+				<fieldset class="col-sm-12" id="field">
+					<legend>Notes</legend>
+					<div id="notes">
+						<label>Ponctualité : </label>  15 /20  <label>Rem : </label> Rarement en retard <br>   
+						<label>Intégration : </label>  10 /20  <label>Rem : </label> Très réservé et solitaire  <br>   
 						<label>Implication : </label> 18 /20    <label>Rem : </label> Implication avec un grand I  <br>   
-						<label>Communication : </label> 8 /20   <label>Rem : </label> Très timide  <br>   
+						<label>Communication : </label> 8 /20   <label>Rem : </label> Il a donné sa langue au chat  <br>   
 					</div>
 				</fieldset>
 				<fieldset class="col-sm-12" id="field">					

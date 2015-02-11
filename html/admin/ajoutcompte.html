@@ -17,24 +17,24 @@
 		<nav class="nav-link">
 			<ul class="nav nav-pills nav-stacked">
 				<li role="presentation"> <a href="accueil.html"> <span class="glyphicon glyphicon-home"></span>  Accueil</a></li>
-				<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>   Support</a></li>
+				<li role="presentation"> <a href="support.html"> <span class="glyphicon glyphicon-cog"></span>  Support</a></li>
 				<li role="presentation"> <a href="faq.html"> <span class="glyphicon glyphicon-flag"></span>  F.A.Q</a></li>
+			</ul>
+		</nav>
+	</div>
 
-				<div class="container" id="main">
-					<section class="col-sm-offset-2 col-sm-10">
-						<h1>Ajout d'un compte</h1>
-						<section>
-							<form id="signup" method ="post" action="DJANGO">
-								<div class="input-group">
-								</ul>
-							</nav>
-						</div>
+	<div class="container" id="main">
+		<section class="col-sm-offset-2 col-sm-10">
+			<h1>Ajout d'un compte</h1>
+			<section>
+				<form id="signup" method ="post" action="DJANGO">
+					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">Nom*</span>
-						<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" name="nom" id="nom" required autofocus>
+						<input type="text" class="form-control" placeholder="Nom" aria-describedby="basic-addon1" name="nom" id="nom" required autofocus>
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">Prénom*</span>
-						<input type="text" class="form-control" placeholder="Firstname" aria-describedby="basic-addon1" name="nom" id="nom" required>
+						<input type="text" class="form-control" placeholder="Prénom" aria-describedby="basic-addon1" name="nom" id="nom" required>
 					</div>					         
 					<label for="specialite"> Specialité </label>
 					<select name="specialite" id="specialite" class="form-control" required>
@@ -44,15 +44,15 @@
 					</select>
 					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">Email*</span>
-						<input type="email" class="form-control" placeholder="holéholé@mamamia.msn" aria-describedby="basic-addon1" name="email" id="email" required>
+						<input type="email" class="form-control" placeholder="adresse@urjob.com" aria-describedby="basic-addon1" name="email" id="email" required>
 						<p class="validation01">
-							<span class="invalid">Please enter a valid email address e.g. ryan@example.com</span>
-							<span class="valid">Thank you for entering a valid email</span>
+							<span class="invalid">Email invalid</span>
+							<span class="valid">Email OK</span>
 						</p>
 					</div>
 					<div class="input-group">
 						<span class="input-group-addon" id="basic-addon1">Téléphone du poste*</span>
-						<input type="tel" class="form-control" placeholder="0612345678" aria-describedby="basic-addon1" name="telPoste" id="tel" pattern="\d{10}" required>
+						<input type="tel" class="form-control" placeholder="0112345678" aria-describedby="basic-addon1" name="telPoste" id="tel" pattern="\d{10}" required>
 						<p class="validation01">
 							<span class="invalid">No spaces or brackets e.g. 0390001234</span>
 							<span class="valid">That's what we wanted!</span>
@@ -67,9 +67,8 @@
 						</p>
 					</div>	
 					<p id="avertissement">
-						Les éléments marqués d'un * sont obligatoires
-
-						A la création d'un nouveau compte, vous serez prélevés de 50 euros
+						Les éléments marqués d'un * sont obligatoires.<br>
+						A la création d'un nouveau compte, vous serez prélevés de 50 euros.<br>
 						Un mail avec le mot de passe et l'identifiant seront envoyés au titulaire du compte.
 					</p>				
 					<button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Enregistrer</button>        
